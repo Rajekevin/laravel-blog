@@ -1,4 +1,6 @@
 @extends('main')
+
+
 @section('content')
     <div class="container">
 
@@ -56,4 +58,4 @@
     </div>
     <!-- end of .container -->
 
- @end
+ @endsection
