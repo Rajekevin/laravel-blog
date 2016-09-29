@@ -1,5 +1,15 @@
 @extends('main')
 
+{{-- @section('stylesheets')
+mettre le code
+
+@endsection
+ --}}
+
+
+  @section('title','| Homepage')
+
+
 
 @section('content')
     <div class="container">
@@ -59,3 +69,13 @@
     <!-- end of .container -->
 
  @endsection
+
+
+{{--  @section('scripts')
+
+  <!--mettre le code-->
+
+  <script>
+  confirm('ok');
+  </script>
+ @endsection --}}

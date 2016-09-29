@@ -1,6 +1,8 @@
 
 @extends('main')
 
+ @section('title','| About')
+
         <!-- Styles -->
         <style>
             html, body {
