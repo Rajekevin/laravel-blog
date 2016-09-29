@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Post;
+
 class PostController extends Controller
 {
     /**
@@ -38,7 +40,27 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validate the data
+        $this->validate($request, array(
+            'name' => 'required|max:255',
+            'content'=>'required'
+
+            ) 
+
+              );
+
+
+        //store in the database
+
+        $post = new Post;
+
+        $post->name = $request->name;
+        $post->content = $request->content;
+        $post->save();
+
+        return redirect()->route('posts.show', $post->id);
+
+        //redirect to another page
     }
 
     /**
